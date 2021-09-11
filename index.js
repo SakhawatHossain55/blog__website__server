@@ -36,7 +36,6 @@ app.get("/", (req, res) => {
   res.send("Hello from db it's working working");
 });
 
-
 const upload = multer({ storage: storage });
 app.post("/api/upload", upload.single("file"), (req, res) => {
   res.status(200).json("File has been uploaded");
